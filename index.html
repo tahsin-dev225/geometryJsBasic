@@ -6,6 +6,16 @@
     <title>Geometry Geometry</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bgYellow :hover{
+        background-color: #FBBCED;
+      }
+      .btnbg :hover{
+        background-color: cyan;
+        color:midnightblue
+      }
+      
+    </style>
 </head>
 <body class="m-8">
     <header>
@@ -17,7 +27,7 @@
             <!-- shape card -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <!-- trinangle -->
-                <div class="card  bg-base-100 shadow-xl">
+                <div class="card bgYellow  bg-base-100 shadow-xl">
                     <figure><img src="images/triangle.png" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Triangle</h2>
@@ -31,25 +41,28 @@
                       <div>
                         <p class="text-2xl">Area: <span id="triangle-area"> </span> <span>cm <sup>2</sup></span></p>
                       </div>
-                      <div class="card-actions justify-center">
-                        <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate Now</button>
+                      <div class="card-actions btnbg justify-center">
+                        <button onclick="calculateTriangleArea()" class="btn  btn-primary w-full">Calculate Now</button>
                       </div>
                     </div>
                   </div>
                   <!-- rectangle -->
-                  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                  <div class="card bgYellow card-compact w-96 bg-base-100 shadow-xl">
                     <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title mx-auto">Rectangle</h2>
                       <p class="text-center">Area (A) = w   x    I</p>
                       <div class="flex items-center">
-                        <input type="text" id="" class="w-24 p-1 mx-2 border-2 border-slate-300 text-xl" placeholder="w">
+                        <input type="text" id="rect-width" class="w-24 p-1 mx-2 border-2 border-slate-300 text-xl" placeholder="Widht">
                         <span>cm</span>
-                        <input type="text"id="" class="w-24 p-1 mx-2 border-2 border-slate-300 text-xl" name=""  placeholder="l">
+                        <input type="text"id="rect-lenght" class="w-24 p-1 mx-2 border-2 border-slate-300 text-xl" name=""  placeholder="Length">
                         <span>cm</span>
                       </div>
+                      <div>
+                        <p class="text-2xl">Area : <span id="rect-area"></span> <span>cm <sup>2</sup></span></p>
+                      </div>
                       <div class="card-actions justify-end">
-                        <button onclick="calRectArea()" class="btn btn-primary w-full">Buy Now</button>
+                        <button onclick="calRectAr()" class="btn btn-primary w-full">Buy Now</button>
                       </div>
                     </div>
                   </div>
@@ -58,9 +71,18 @@
                     <figure><img src="images/parallelogram.png" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Parallelogram</h2>
-                      <p>Area (A) = 0.5 X b X h</p>
+                      <p>Area (A) = b   X    h</p>
+                      <div class="flex items-center">
+                        <input type="text" id="pera-base" class="w-24 p-1 mx-2 border-2 border-slate-300 text-xl" placeholder="Widht">
+                        <span>cm</span>
+                        <input type="text"id="pera-height" class="w-24 p-1 mx-2 border-2 border-slate-300 text-xl" name=""  placeholder="Length">
+                        <span>cm</span>
+                      </div>
+                      <div>
+                        <p class="text-2xl">Area : <span id="pera-area"></span> <span>cm <sup>2</sup></span></p>
+                      </div>
                       <div class="card-actions ">
-                        <button class="btn btn-primary w-full">Calculate Now</button>
+                        <button onclick="calPenAr()" class="btn btn-primary w-full">Calculate Now</button>
                       </div>
                     </div>
                   </div>
